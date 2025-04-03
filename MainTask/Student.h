@@ -5,6 +5,6 @@ class Student {
 public:
 	string name;
 	int age;
-	double mark;
+	double mark[10];
 	bool alive;
 };
