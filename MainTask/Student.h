@@ -10,8 +10,19 @@ public:
 	double mark;
 	bool alive;
 
+	// constructors
+
+	// default-constructors or constructors without arguments
+	Student() {
+		cout << "default-constructor..." << endl;
+		name = "no name";
+		age = 13;
+		mark = 4.0;
+		alive = true;
+	}
+
 	// methods
-	string getString() {
+	string toString() {
 		string s = "Name: " + name;
 		s += ", age: " + to_string(age);
 		s += ", average mark: " + to_string(mark);
