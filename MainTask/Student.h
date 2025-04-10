@@ -65,6 +65,11 @@ public:
 		alive = student.alive;
 	}
 
+	// destructor
+	~Student() {
+		cout << "destructor..." << endl;
+	}
+
 	// methods
 	string toString() {
 		string s = "Name: " + name;
