@@ -24,9 +24,9 @@ public:
 	}
 
 	// constructor with arguments
-	Student(string nm) {
+	Student(string name) {
 		cout << "constructor with arguments (name)..." << endl;
-		name = nm;
+		this->name = name;
 		age = 13;
 		countMarks = 0;
 		marks = nullptr;
@@ -34,29 +34,29 @@ public:
 	}
 
 	// constructor with arguments
-	Student(string nm, int a) {
+	Student(string name, int age) {
 		cout << "constructor with arguments (name, age)..." << endl;
-		name = nm;
-		age = a < 13 ? 13 : a;
+		this->name = name;
+		this->age = age < 13 ? 13 : age;
 		countMarks = 0;
 		marks = nullptr;
 		alive = true;
 	}
 
 	// canonical-constructor
-	Student(string nm, int a, int count, bool alv) {
+	Student(string name, int age, int countMark, bool alive) {
 		cout << "canonical-constructor ..." << endl;
-		name = nm;
-		age = a;
-		countMarks = count;
-		marks = new int[count];
+		this->name = name;
+		this->age = age;
+		this->countMarks = countMark;
+		marks = new int[countMark];
 
-		for (int i = 0; i < count; i++)
+		for (int i = 0; i < countMark; i++)
 		{
 			marks[i] = 4;
 		}
 
-		alive = alv;
+		this->alive = alive;
 	}
 
 	// copy-constructor
@@ -80,30 +80,30 @@ public:
 		cout << "destructor..." << endl;
 
 		if (countMarks > 0) {
-			delete[] marks;
+			delete[] this->marks;
 		}
 	}
 
 	// methods
 	string toString() {
-		string s = "Name: " + name;
-		s += ", age: " + to_string(age);
-		s += ", marks " + convert();
+		string s = "Name: " + this->name;
+		s += ", age: " + to_string(this->age);
+		s += ", marks " + this->convert();
 		s += ", alive: ";
-		s += alive ? "yes" : "no";
+		s += this->alive ? "yes" : "no";
 		return s;
 	}
 
 	string convert() {
 		string s = "[";
 
-		if (countMarks > 0) {
-			for (int i = 0; i < countMarks - 1; i++)
+		if (this->countMarks > 0) {
+			for (int i = 0; i < this->countMarks - 1; i++)
 			{
-				s += to_string(marks[i]) + ", ";
+				s += to_string(this->marks[i]) + ", ";
 			}
 
-			s += to_string(marks[countMarks - 1]);
+			s += to_string(this->marks[this->countMarks - 1]);
 		}
 
 		s += "]";

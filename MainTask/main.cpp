@@ -2,8 +2,13 @@
 
 int main() {
 	//int array[10]{ 1,2,3 };
-		
+
+	
 	Student student("Alex", 14, 5, true);
+
+	Student s(;
+
+	Student* pStudent = new Student;	
 
 	cout << student.toString() << endl;
 
@@ -17,7 +22,7 @@ int main() {
 	cout << "Student's marks: ";
 	for (int i = 0; i < student.countMarks; i++)
 	{
-		cout << student.getMark(i);
+		cout << student.getMark(i) << " ";
 	}
 
 	return 0;
