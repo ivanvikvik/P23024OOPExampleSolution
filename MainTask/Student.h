@@ -14,33 +14,18 @@ public:
 	// constructors
 
 	// default-constructors or constructors without arguments
-	Student() {
-		cout << "default-constructor..." << endl;
-		name = "no name";
-		age = 13;
-		countMarks = 0;
-		marks = nullptr;
-		alive = true;
+	Student() : Student("no name", 13, 0, true) {
+		cout << "default-constructor..." << endl;		
 	}
 
 	// constructor with arguments
-	Student(string name) {
+	Student(string name) : Student(name, 13) {
 		cout << "constructor with arguments (name)..." << endl;
-		this->name = name;
-		age = 13;
-		countMarks = 0;
-		marks = nullptr;
-		alive = true;
 	}
 
 	// constructor with arguments
-	Student(string name, int age) {
-		cout << "constructor with arguments (name, age)..." << endl;
-		this->name = name;
-		this->age = age < 13 ? 13 : age;
-		countMarks = 0;
-		marks = nullptr;
-		alive = true;
+	Student(string name, int age) : Student(name, age, 0, true) {
+		cout << "constructor with arguments (name, age)..." << endl;	
 	}
 
 	// canonical-constructor
@@ -60,19 +45,15 @@ public:
 	}
 
 	// copy-constructor
-	Student(const Student& student) {
+	Student(const Student& student) : Student(student.name, 
+		student.age, student.countMarks, student.alive)
+		{
 		cout << "copy-constructor ..." << endl;
-		name = student.name;
-		age = student.age;
-		countMarks = student.countMarks;
-		marks = new int[countMarks];
 
 		for (int i = 0; i < countMarks; i++)
 		{
 			marks[i] = student.marks[i];
 		}
-
-		alive = student.alive;
 	}
 
 	// destructor

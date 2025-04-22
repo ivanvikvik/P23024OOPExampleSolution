@@ -1,29 +1,9 @@
 ﻿#include "Student.h"
 
 int main() {
-	//int array[10]{ 1,2,3 };
+	Student st("Alex");
 
-	
-	Student student("Alex", 14, 5, true);
-
-	Student s(;
-
-	Student* pStudent = new Student;	
-
-	cout << student.toString() << endl;
-
-	for (int i = 0; i < student.countMarks; i++)
-	{
-		student.setMark(i, rand() % 7 + 4);
-	}
-
-	cout << student.toString() << endl;
-
-	cout << "Student's marks: ";
-	for (int i = 0; i < student.countMarks; i++)
-	{
-		cout << student.getMark(i) << " ";
-	}
+	cout << st.toString() << endl;
 
 	return 0;
 }
