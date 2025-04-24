@@ -2,6 +2,7 @@
 #include <string>
 using namespace std;
 
+// Entity-class
 class Student {
 public:
 	// fields
@@ -14,23 +15,23 @@ public:
 	// constructors
 
 	// default-constructors or constructors without arguments
-	Student() : Student("no name", 13, 0, true) {
-		cout << "default-constructor..." << endl;		
+	Student() : Student("no name", 13, 10, true) {
+	//	cout << "default-constructor..." << endl;		
 	}
 
 	// constructor with arguments
 	Student(string name) : Student(name, 13) {
-		cout << "constructor with arguments (name)..." << endl;
+		//cout << "constructor with arguments (name)..." << endl;
 	}
 
 	// constructor with arguments
 	Student(string name, int age) : Student(name, age, 0, true) {
-		cout << "constructor with arguments (name, age)..." << endl;	
+		//cout << "constructor with arguments (name, age)..." << endl;	
 	}
 
 	// canonical-constructor
 	Student(string name, int age, int countMark, bool alive) {
-		cout << "canonical-constructor ..." << endl;
+		//cout << "canonical-constructor ..." << endl;
 		this->name = name;
 		this->age = age;
 		this->countMarks = countMark;
@@ -58,7 +59,7 @@ public:
 
 	// destructor
 	~Student() {
-		cout << "destructor..." << endl;
+		//cout << "destructor..." << endl;
 
 		if (countMarks > 0) {
 			delete[] this->marks;

@@ -18,10 +18,20 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test01.cpp" />
+    <ClCompile Include="test02.cpp" />
+    <ClCompile Include="test03.cpp" />
+    <ClCompile Include="test04.cpp" />
+    <ClCompile Include="test05.cpp" />
+    <ClCompile Include="test06.cpp" />
+    <ClCompile Include="test07.cpp" />
+    <ClCompile Include="test08.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{5D41A83F-1DDE-47A7-9ECE-2745C2D5F0B7}</ProjectGuid>
-    <RootNamespace>MainTask</RootNamespace>
+    <ProjectGuid>{91D9033D-18B0-4F0F-A8FF-EB26B3A65896}</ProjectGuid>
+    <RootNamespace>Test01Project</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -118,13 +128,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="Initializer.h" />
-    <ClInclude Include="Student.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
