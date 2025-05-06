@@ -123,6 +123,7 @@
     <ClInclude Include="Student.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Initializer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Student.cpp" />
   </ItemGroup>
