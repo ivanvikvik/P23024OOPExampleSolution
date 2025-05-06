@@ -12,6 +12,23 @@ private:
 	int countMarks;
 	bool alive;
 
+	string convert() {
+		string s = "[";
+
+		if (this->countMarks > 0) {
+			for (int i = 0; i < this->countMarks - 1; i++)
+			{
+				s += to_string(this->marks[i]) + ", ";
+			}
+
+			s += to_string(this->marks[this->countMarks - 1]);
+		}
+
+		s += "]";
+
+		return s;
+	}
+
 public:
 	string getName() {
 		return name;
@@ -50,6 +67,17 @@ public:
 
 	void setAlive(bool alive) {
 		this->alive = alive;
+	}
+
+	double getAverageMark() {
+		double sum = 0;
+
+		for (int i = 0; i < countMarks; i++)
+		{
+			sum += marks[i];
+		}
+
+		return sum / countMarks;
 	}
 
 	// constructors
@@ -114,24 +142,7 @@ public:
 		s += ", alive: ";
 		s += this->alive ? "yes" : "no";
 		return s;
-	}
-
-	string convert() {
-		string s = "[";
-
-		if (this->countMarks > 0) {
-			for (int i = 0; i < this->countMarks - 1; i++)
-			{
-				s += to_string(this->marks[i]) + ", ";
-			}
-
-			s += to_string(this->marks[this->countMarks - 1]);
-		}
-
-		s += "]";
-
-		return s;
-	}
+	}	
 
 	int getMark(int index) {		
 		if (countMarks == 0 || index < 0
