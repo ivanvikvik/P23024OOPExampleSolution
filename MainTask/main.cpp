@@ -1,6 +1,8 @@
 ﻿#include "Initializer.h"
 
 int main() {
+	Student s;
+	
 	Student* list = nullptr;
 	Initializer initializer;
 

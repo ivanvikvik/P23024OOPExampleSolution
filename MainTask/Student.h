@@ -4,13 +4,53 @@ using namespace std;
 
 // Entity-class
 class Student {
-public:
+private:
 	// fields
 	string name;
 	int age;
 	int* marks;
 	int countMarks;
 	bool alive;
+
+public:
+	string getName() {
+		return name;
+	}
+
+	void setName(string name) {
+		this->name = name;
+	}
+
+	int getAge() {
+		return age;
+	}
+
+	void setAge(int age) {
+		if (age >= 13 && age <= 18) {
+			this->age = age;
+		}
+	}
+
+	int* getMarks() {
+		return marks;
+	}
+
+	void setMarks(int* marks, int count) {
+		this->marks = marks;
+		countMarks = count;
+	}
+
+	int getCountMarks() {
+		return countMarks;
+	}
+
+	bool isAlive() {
+		return alive;
+	}
+
+	void setAlive(bool alive) {
+		this->alive = alive;
+	}
 
 	// constructors
 
@@ -93,7 +133,7 @@ public:
 		return s;
 	}
 
-	int getMark(int index) {
+	int getMark(int index) {		
 		if (countMarks == 0 || index < 0
 			|| index >= countMarks) {
 			return -1;
