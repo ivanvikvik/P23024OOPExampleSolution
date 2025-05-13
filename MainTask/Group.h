@@ -16,8 +16,9 @@ public:
 	Student get(int index);
 	void set(int index, Student student);
 	int getCount();
+	int getCapacity();
 	void add(Student student);
-	void add(int index, Student student);
+//	void add(int index, Student student);
 	void remove(Student student);
 	void remove(int index);
 	void clear();

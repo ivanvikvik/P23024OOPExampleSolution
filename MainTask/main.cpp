@@ -1,14 +1,7 @@
-﻿#include "Manager.h"
+﻿#include "Initializer.h"
+#include "Manager.h"
 
-void showAllStudents(Student* list, int count) {
-	for (int i = 0; i < count; i++)
-	{
-		cout << list[i].toString() << endl;
-	}
-}
-
-int main() {
-	Student* list = nullptr;
+int main() {	
 	Initializer initializer;
 	Manager manager;
 
@@ -17,19 +10,19 @@ int main() {
 	cout << "Input number of students: ";
 	cin >> count;
 
-	initializer.init(list, count);
+	Group group(count);
+
+	initializer.init(group);
 
 	cout << "All students:\n";
-	showAllStudents(list, count);
+	cout << "List of students:\n" << group.toString() << endl;
 
 	int size = 0;
-	Student* bestList = manager.findBestStudents(list, count, size);
-	cout << "\nList of best students:\n";
-	showAllStudents(bestList, size);
-
-	Student* worstList = manager.findWorstStudents(list, count, size);
-	cout << "\nList of worst students:\n";
-	showAllStudents(worstList, size);
-
+	Group bestGroup = manager.findBestStudents(group);
+	cout << "\nList of best students:\n" << bestGroup.toString() << endl;
+	
+	Group worstGroup= manager.findWorstStudents(group);
+	cout << "\nList of worst students:\n" << worstGroup.toString() << endl;
+	
 	return 0;
 }

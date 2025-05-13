@@ -87,7 +87,7 @@ Student::Student(string name, int age, int countMark, bool alive) {
 Student::Student(const Student& student) : Student(student.name,
 	student.age, student.countMarks, student.alive)
 {
-	cout << "copy-constructor ..." << endl;
+	//cout << "copy-constructor ..." << endl;
 
 	for (int i = 0; i < countMarks; i++)
 	{

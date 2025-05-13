@@ -1,7 +1,7 @@
 #include "Initializer.h"
 
 void Initializer::init(Group group) {
-	if (group.isEmpty()) {
+	if (group.getCapacity() <= 0) {
 		return;
 	}
 
@@ -16,7 +16,7 @@ void Initializer::init(Group group) {
 	int minMark = 6;
 	int maxMark = 10;
 
-	for (int i = 0; i < group.getCount(); i++)
+	for (int i = 0; i < group.getCapacity(); i++)
 	{
 		group.get(i).setName(names[rand() % 15]);
 		group.get(i).setAge(rand() % (maxAge - minAge + 1) + minAge);
