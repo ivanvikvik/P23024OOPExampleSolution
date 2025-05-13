@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{5D41A83F-1DDE-47A7-9ECE-2745C2D5F0B7}</ProjectGuid>
-    <RootNamespace>MainTask</RootNamespace>
+    <ProjectGuid>{32FBB1BB-BE94-4933-843A-B4B4D8E72E16}</ProjectGuid>
+    <RootNamespace>IntegerProject</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -119,17 +119,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Group.h" />
-    <ClInclude Include="Initializer.h" />
-    <ClInclude Include="Manager.h" />
-    <ClInclude Include="Student.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Group.cpp" />
-    <ClCompile Include="Initializer.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Manager.cpp" />
-    <ClCompile Include="Student.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,7 +15,7 @@ private:
 	string convert();
 
 public:	
-	Student() : Student("no name", 13, 10, true) { }
+	Student() : Student("", 0, 0, false) { }
 	Student(string name) : Student(name, 13) { }
 	Student(string name, int age) : Student(name, age, 0, true) { }
 	Student(string name, int age, int countMark, bool alive);
