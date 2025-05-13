@@ -10,11 +10,22 @@ Group::Group(int capacity) {
 }
 
 Group::Group(Student* list, int count) {
-	this->count = count;
+	if (count > 0 && list != nullptr) {
+		this->count = count;
+		capacity = count;
+		list = new Student[count];
+
+		for (int i = 0; i < count; i++)
+		{
+			this->list[i] = list[i];
+		}
+	}
 }
 
 Group::~Group() {
-
+	if (list != nullptr) {
+		delete[] list;
+	}
 }
 
 Student Group::get(int index);
