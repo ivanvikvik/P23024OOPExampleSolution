@@ -1,0 +1,25 @@
+#pragma once
+#include <iostream>
+#include <string>
+using namespace std;
+
+// LIFO
+class Stack
+{
+private:
+	int* stack;
+	int size;
+
+public:
+	Stack();
+	~Stack();
+
+	void push(int element);
+	int pop();
+	int peek();
+	bool isEmpty();
+	int getSize();
+	void clear();
+	string toString();
+};
+
