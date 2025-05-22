@@ -1,11 +1,19 @@
 #pragma once
-#include "Group.h"
+#include "Worker.h"
 
 // function class
-class Manager
+class Manager : public Worker
 {
 public:
-	Group findBestStudents(Group group);
-	Group findWorstStudents(Group group);
+	Manager() {
+		cout << "Manager default constructor." << endl;
+	}
+
+	~Manager() {
+		cout << "Manager destructor." << endl;
+	}
+
+	//Group findBestStudents(Group group);
+	//Group findWorstStudents(Group group);
 };
 
