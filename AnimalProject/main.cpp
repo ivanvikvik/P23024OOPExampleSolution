@@ -1,47 +1,19 @@
-#include "main.h"
-
-class A {
-public:
-	virtual void show() {
-		cout << "class A" << endl;
-	}
-};
-
-class B : public A {
-public:
-	void show() override {
-		cout << "class B" << endl;
-	}
-};
-
-class C : public A { 
-	void show() override {
-		cout << "class C" << endl;
-	}
-};
-class D : public C {
-	void show() override {
-		cout << "class D" << endl;
-	}
-};
+#include "SoundStudio.h"
+#include "Cat.h"
+#include "Dog.h"
 
 // динамический полиморфизм (dynamic polymorphism)
 // позднее связывание (dynamic binding)
 // переопределение (overriding)
 
 int main() {
-	A* a = new A();
-	a->show();
-	delete a;
+	SoundStudio studio;
 
-	a = new B();
-	a->show();
-	
-	a = new C();
-	a->show();
-	
-	a = new D();
-	a->show();
+	Dog* dog = new Dog("Laika");
+	Cat* cat = new Cat("Adel");
+
+	studio.makeItSound(dog);
+	studio.makeItSound(cat);
 
 	return 0;
 }
