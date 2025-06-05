@@ -1,11 +1,15 @@
 #pragma once
-class Bus
+#include "Transport.h"
+
+class Bus : public Transport
 {
 public:
 	//...
-	int gas;
-	Bus() : gas(0) {}
-	Bus(int gas) : gas(gas) {}
+	Bus() {}
+	Bus(int tank) : Transport(tank) {}
 
+	string toString() override {
+		return "\nBus";
+	}
 };
 

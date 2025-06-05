@@ -1,20 +1,26 @@
+#include "Transport.h"
 #include "GasStation.h"
-#include <iostream>
-using namespace std;
+#include "Plane.h"
+#include "Car.h"
+#include "Truck.h"
+#include "Bus.h"
 
 int main() {
-	const int car_size = 3;
-	const int truck_size = 2;
-	const int bus_size = 1;
+	int size = 8;
 
-	Car cars[car_size]{ Car(40), Car(50), Car(60) };
-	Truck trucks[truck_size]{ Truck(500), Truck(450) };
-	Bus buses[bus_size]{ Bus(400) };
+	Transport** transports = new Transport*[size]{
+		new Car(40), new Car(50), new Car(60),
+		new Truck(450), new Truck(500),
+		new Bus(900), new Plane(3000), new Plane(5000)
+	};
+		
+	//Plane planes[plane_size]{ Plane(1000), Plane(1500) };
 	
 	GasStation station;
 
-	cout << "Total gas: " << station.calculateTotalGas(cars, car_size,
-		trucks, truck_size, buses, bus_size) << endl;
+	cout << "Total gas: " << station.calculateTotalGas(transports, size) << endl;
+	cout << "All info:\n" << station.getAllInfo(transports, size) << endl;
+
 
 	return 0;
 }

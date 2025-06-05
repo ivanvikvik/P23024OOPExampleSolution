@@ -1,12 +1,15 @@
 #pragma once
-class Truck
+#include "Transport.h"
+
+class Truck : public Transport
 {
 public:
-	//...
-	int tank;
+	//...	
+	Truck() {}
+	Truck(int tank) : Transport(tank) {}
 
-	Truck() : tank(0) {}
-	Truck(int tank) : tank(tank) {}
-
+	string toString() override {
+		return "\nTruck";
+	}
 };
 
